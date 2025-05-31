@@ -1,0 +1,41 @@
+.gallery {
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 0 1rem;
+  text-align: center;
+
+  h2 {
+    font-size: 5rem;
+    margin-bottom: 2rem;
+  
+  }
+
+ .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+ .card {
+  background: rgba(255, 255, 255, 0.15); // Transparente com leve branco
+  backdrop-filter: blur(12px); // Desfoque de fundo
+  -webkit-backdrop-filter: blur(12px); // Suporte Safari
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 1rem;
+  transition: transform 0.3s ease;
+
+  img {
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+}

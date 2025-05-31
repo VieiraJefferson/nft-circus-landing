@@ -1,0 +1,38 @@
+.marqueeWrapper {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  background: black;
+  border-color: #6df81c;
+  border: 1px solid;
+  padding: 0.5rem 0;
+  position: relative;
+  z-index: 100;
+}
+
+.marqueeTrack {
+  display: flex;
+  gap: 4rem;
+  animation: scrollLoop 30s linear infinite;
+  font-size: 1.4rem;
+  font-weight: 800;
+
+  background-image: url('/circus.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(2px 2px 0 #000);
+  will-change: transform;
+}
+
+@keyframes scrollLoop {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

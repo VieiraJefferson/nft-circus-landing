@@ -1,0 +1,17 @@
+.footer {
+  text-align: center;
+  margin-top: 4rem;
+  padding: 2rem 1rem;
+  font-size: 1.4rem;
+  color: #f8f4f4;
+
+  a {
+    color: #fcfcfc;
+    text-decoration: none;
+    margin: 0 0.5rem;
+
+    &:hover {
+      color: #6e6e6ebe;
+    }
+  }
+}

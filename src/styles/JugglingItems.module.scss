@@ -1,0 +1,30 @@
+// .juggleWrapper {
+//   position: fixed;
+//   top: 30%;
+ 
+//   width: 100%;
+//   height: 400px;
+//   pointer-events: none;
+//   z-index:90;
+// }
+
+// .item {
+//   width: 50px;
+//   position: absolute;
+// }
+  
+
+.juggleWrapper {
+  position: fixed;
+  top: 30%;
+  width: 100%;
+  height: 400px;
+  pointer-events: none;
+  z-index: 90;
+}
+
+.item {
+  width: 50px;
+  position: absolute;
+}
+

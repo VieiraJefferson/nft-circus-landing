@@ -1,0 +1,17 @@
+.container {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-top: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.image {
+  width: 100%;
+  max-width: 1000px;
+  height: auto;
+  object-fit: cover;
+  will-change: transform;
+}
