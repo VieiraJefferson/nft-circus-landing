@@ -1,31 +1,73 @@
+// .marqueeWrapper {
+//   width: 100%;
+//   overflow: hidden;
+//   white-space: nowrap;
+//   background: black;
+//   padding: 0.6rem 0;
+//   position: relative;
+//   z-index: 100;
+// }
+
+// .marqueeTrack {
+//   display: flex;
+//   gap: 3rem;
+//   animation: scrollLoop 30s linear infinite;
+//   font-size: 1.3rem;
+//   font-weight: 800;
+
+//   background-image: url('/circus.png');
+//   background-size: cover;
+//   background-position: center;
+//   background-repeat: no-repeat;
+//   -webkit-background-clip: text;
+//   -webkit-text-fill-color: transparent;
+//   background-clip: text;
+//   filter: drop-shadow(2px 2px 0 #000);
+//   will-change: transform;
+// }
+
+// @keyframes scrollLoop {
+//   0% {
+//     transform: translateX(0%);
+//   }
+//   100% {
+//     transform: translateX(-50%);
+//   }
+// }
+
 .marqueeWrapper {
-  width: 100%;
   overflow: hidden;
-  white-space: nowrap;
-  background: black;
-  border-color: #6df81c;
-  border: 1px solid;
-  padding: 0.5rem 0;
+  height: 1.3rem;
+  width: 100%;
+  background: #00142D;
+  padding: 1rem 0;
   position: relative;
   z-index: 100;
 }
 
 .marqueeTrack {
   display: flex;
-  gap: 4rem;
-  animation: scrollLoop 30s linear infinite;
-  font-size: 1.4rem;
-  font-weight: 800;
+  width: fit-content;
+  animation: scrollLoop 65s linear infinite;
 
-  background-image: url('/circus.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  span {
+    margin-right: 2.5rem;
+    display: flex;
+    gap: 2rem; // Espaço entre textos
+  }
+
+.textItem {
+  font-size: 1.2rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, #ff6ec4, #42e3f3, #f7dc33);
   background-clip: text;
-  filter: drop-shadow(2px 2px 0 #000);
-  will-change: transform;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  white-space: nowrap;
+  filter: drop-shadow(2px 2px 0 #000); // sombra opcional
+}
+
 }
 
 @keyframes scrollLoop {
@@ -34,5 +76,25 @@
   }
   100% {
     transform: translateX(-50%);
+  }
+}
+
+
+
+
+.marqueeLine {
+  height: 5px;
+  width: 100%;
+  background: linear-gradient(90deg, #ff6ec4, #7873f5, #42e3f3, #f7dc33, #ff6ec4);
+  background-size: 400% 100%;
+  animation: gradientBorder 6s linear infinite;
+}
+
+@keyframes gradientBorder {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
   }
 }

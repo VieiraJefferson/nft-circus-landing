@@ -16,6 +16,7 @@ export default function Home() {
       <ConfettiRain />
       <JugglingItems />
       <ScrollingText />
+      <JugglingItems />
       <HeroSection />
       <ParallaxImage />
       <GallerySection />
