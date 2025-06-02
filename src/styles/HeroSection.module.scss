@@ -1,3 +1,5 @@
+
+
 // @keyframes gradientFlow {
 //   0% { background-position: 0% 50%; }
 //   50% { background-position: 100% 50%; }
@@ -15,15 +17,20 @@
 //   }
 // }
 
-
 // .hero {
-//   padding: 4rem 2rem 2rem;
-//   text-align: center; // Garante centralização de conteúdo inline (como o h1)
+//   min-height: 100vh;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   margin-bottom: 0 auto;
 // }
+
+
+
 // .titleWithImage {
 //   font-size: 12.5rem;
 //   font-weight: 800;
-//   margin-bottom: 7rem;
+//   margin: 0 auto ; // centraliza horizontalmente e adiciona margem inferior
 //   text-align: center;
 
 //   background-image: url('/circus.png');
@@ -36,17 +43,56 @@
 //   -webkit-text-fill-color: transparent;
 //   background-clip: text;
 
-//   filter: drop-shadow(3px 3px 0 #000); // <-- Aqui está o truque
+//   filter: drop-shadow( -5px 5px 0 #000);
+//   word-break: break-word;
+//   overflow-wrap: break-word;
+
+//   max-width: 100%;
+//   display: inline-block;
+//   line-height: 1.1;
+//   padding: 0 1rem;
+
+//   @media (max-width: 1200px) {
+//     font-size: 8rem;
+//   }
+
+//   @media (max-width: 768px) {
+//     font-size: 5rem;
+//   }
+
+//   @media (max-width: 480px) {
+//     font-size: 3.4rem;
+//   }
+
+//   @media (max-width: 360px) {
+//     font-size: 2.6rem;
+//   }
+
+//   @media (max-width: 320px) {
+//     font-size: 2.2rem;
+//   }
 // }
 
+// .titleWithImage span {
+//   display: inline-block;
+// }
 
 
 // .subtitle {
-//   font-size: 1.5rem;
-//   color: #ffffffcc;
-//   margin-bottom: 2rem;
-//   animation: bounceFade 1.5s ease-out forwards;
+//   padding: 0;
+
+//   font-size: 1.6rem;
+//   max-width: 700px;
+//   margin-left: auto;
+//   margin-right: auto;
+//   text-align: center;
+//   color: white;
+//   line-height: 1.5;
+//   text-transform: uppercase;
+//   text-shadow: -4px 2px 0 #000;
+//   animation: bounceFade 1.6s ease-out forwards;
 // }
+
 
 // .preview {
 //   max-width: 100%;
@@ -73,29 +119,55 @@
 //     &:hover {
 //       background-color: #e23d3d;
 //     }
+
+//     @media (max-width: 768px) {
+//       font-size: 0.9rem;
+//       padding: 0.7rem 1.3rem;
+//     }
+
+//     @media (max-width: 480px) {
+//       font-size: 0.8rem;
+//       padding: 0.6rem 1rem;
+//     }
 //   }
 // }
 
-// .titleWithImage {
-//   font-size: 12.5rem;
+// .titleWrapper {
+//   position: relative;
+//   text-align: center;
+//   margin-bottom: 2rem;
+//    max-width: 100vw;
+//   overflow-x: hidden;
+//   padding: 0 1rem;
+// }
 
-//   @media (max-width: 1200px) {
-//     font-size: 8rem;
-//   }
+// .credit {
+//   position: absolute;
+//   right: 13rem;
+//   margin-top: 0;
+//   bottom: -1.5rem;
+//   font-size: 1.8rem;
+//   color: rgba(255, 255, 255, 0.85);
+//   font-style: italic;
+//    text-shadow:
+//     2px 2px 0 #000,
+//     2px 2px 0 #000;
 
 //   @media (max-width: 768px) {
-//     font-size: 5rem;
+//     font-size: 0.85rem;
 //   }
 
 //   @media (max-width: 480px) {
-//     font-size: 3rem;
+//     font-size: 0.75rem;
+//     bottom: -1.2rem;
 //   }
-
-//   // ... (demais estilos iguais)
 // }
- 
 
 
+
+
+
+/* ANIMAÇÕES */
 @keyframes gradientFlow {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
@@ -113,132 +185,82 @@
   }
 }
 
+/* ESTRUTURA PRINCIPAL */
 .hero {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-bottom: 0 auto;
+  align-items: center;
+  padding: 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden; /* Previne scroll indesejado */
 }
 
+/* CONTAINER DO TÍTULO */
+.titleWrapper {
+  position: relative;
+  margin-bottom: 3rem;
+  width: 100%;
+  z-index: 1;
+}
 
-
+/* TÍTULO PRINCIPAL (Efeito texto com imagem) */
 .titleWithImage {
   font-size: 12.5rem;
   font-weight: 800;
-  margin: 0 auto ; // centraliza horizontalmente e adiciona margem inferior
+  margin: 0 auto;
   text-align: center;
-
   background-image: url('/circus.png');
-  background-size: cover;
+  background-size: 500%;
   background-position: center;
   background-repeat: no-repeat;
-
-  color: transparent;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+    color: white;
+ 
   background-clip: text;
-
-  filter: drop-shadow( -5px 5px 0 #000);
-  word-break: break-word;
-  overflow-wrap: break-word;
-
-  max-width: 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  filter: drop-shadow(-5px 5px 0 #000);
+  line-height: 0.9;
   display: inline-block;
-  line-height: 1.1;
+  overflow: visible; /* Permite animação das letras */
   padding: 0 1rem;
 
-  @media (max-width: 1200px) {
-    font-size: 8rem;
+  /* Letras individuais (para animação) */
+  span {
+    display: inline-block;
+    transform-origin: bottom center;
+    will-change: transform, opacity; /* Otimização de performance */
   }
 
-  @media (max-width: 768px) {
-    font-size: 2rem;
-    padding: 0 1.5rem;
+  /* Responsividade */
+  @media (max-width: 1200px) { font-size: 8rem; }
+  @media (max-width: 768px) { 
+    font-size: 5rem;
+    line-height: 1;
   }
-
-  @media (max-width: 480px) {
-    font-size: 4.2rem;
-    padding: 0 2rem;
+  @media (max-width: 480px) { 
+    font-size: 3.4rem;
+    margin-bottom: 1rem;
   }
+  @media (max-width: 360px) { font-size: 2.6rem; }
+  @media (max-width: 320px) { font-size: 2.2rem; }
 }
 
-.titleWithImage span {
-  display: inline-block;
-}
-
-
-.subtitle {
-  padding: 0;
-
-  font-size: 1.6rem;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  color: white;
-  line-height: 1.5;
-  text-transform: uppercase;
-  text-shadow: -4px 2px 0 #000;
-  animation: bounceFade 1.6s ease-out forwards;
-}
-
-
-.preview {
-  max-width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2);
-  margin-bottom: 2rem;
-}
-
-.buttons {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-
-  a {
-    background-color: #ff4f4f;
-    color: white;
-    padding: 0.8rem 1.6rem;
-    font-size: 1rem;
-    border-radius: 8px;
-    text-decoration: none;
-    transition: background 0.3s ease;
-
-    &:hover {
-      background-color: #e23d3d;
-    }
-
-    @media (max-width: 768px) {
-      font-size: 0.9rem;
-      padding: 0.7rem 1.3rem;
-    }
-
-    @media (max-width: 480px) {
-      font-size: 0.8rem;
-      padding: 0.6rem 1rem;
-    }
-  }
-}
-
-.titleWrapper {
-  position: relative;
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
+/* CRÉDITO (Posicionamento corrigido) */
 .credit {
   position: absolute;
-  right: 13rem;
-  margin-top: 0;
+  right:18rem;
+  margin-top: 2rem;
   bottom: -1.5rem;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
+  font-weight: 800;
   color: rgba(255, 255, 255, 0.85);
   font-style: italic;
    text-shadow:
-    2px 2px 0 #000,
-    2px 2px 0 #000;
+    -2px 2px 0 #000,
+    -2px 2px 0 #000;
 
   @media (max-width: 768px) {
     font-size: 0.85rem;
@@ -250,4 +272,86 @@
   }
 }
 
+/* SUBTÍTULO */
+.subtitle {
+  font-size: 1.6rem;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  color: white;
+  line-height: 1.5;
+  text-transform: uppercase;
+  text-shadow: -4px 2px 0 #000;
+  animation: bounceFade 1.6s ease-out forwards;
+  padding: 0 1rem;
 
+  @media (max-width: 768px) {
+    font-size: 1.2rem;
+    max-width: 90%;
+  }
+}
+
+/* BOTÕES */
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  z-index: 2;
+
+  a {
+    background-color: #ff4f4f;
+    color: white;
+    padding: 0.8rem 1.6rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    &:hover {
+      background-color: #e23d3d;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    @media (max-width: 768px) {
+      padding: 0.7rem 1.3rem;
+      font-size: 0.9rem;
+    }
+    @media (max-width: 480px) {
+      padding: 0.6rem 1rem;
+      font-size: 0.8rem;
+    }
+  }
+}
+
+// /* EFEITOS EXTRAS (Opcional) */
+// .titleWrapper::after {
+//   content: "";
+//   position: absolute;
+//   bottom: -10px;
+//   left: 50%;
+//   transform: translateX(-50%);
+//   width: 50%;
+//   height: 3px;
+//   background: linear-gradient(90deg, transparent, #ff4f4f, transparent);
+//   opacity: 0.7;
+// }   
+
+.titleWithImage span,
+.letterSpan {
+  display: inline-block;
+
+  background-image: url('/circus.png');
+  background-size: 500%; // aqui é o zoom
+  background-position: center;
+  background-repeat: no-repeat;
+
+  color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  filter: drop-shadow(-5px 5px 0 #000);
+}

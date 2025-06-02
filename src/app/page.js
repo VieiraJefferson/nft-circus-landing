@@ -9,6 +9,7 @@ import GallerySection from '@/components/GallerySection'
 
 import Footer from '@/components/Footer'
 import EthosSection from '@/components/EthosSection'
+import WhitelistForm from '@/components/WhitelistForm'
 
 export default function Home() {
   return (
@@ -16,10 +17,10 @@ export default function Home() {
       <ConfettiRain />
       <JugglingItems />
       <ScrollingText />
-      <JugglingItems />
       <HeroSection />
       <ParallaxImage />
       <GallerySection />
+      <WhitelistForm />
       <EthosSection />
       
       <Footer />
