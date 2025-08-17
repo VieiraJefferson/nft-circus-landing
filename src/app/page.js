@@ -5,13 +5,15 @@ import JugglingItems from '@/components/JugglingItems'
 import ParallaxImage from '@/components/ParallaxImage'
 import ScrollingText from '@/components/ScrollingText'
 
-import GallerySection from '@/components/GallerySection'
+import CircularGallery from '@/components/CircularGallery'
 
 import Footer from '@/components/Footer'
 import EthosSection from '@/components/EthosSection'
 import WhitelistForm from '@/components/WhitelistForm'
 import ImageStack from '@/components/ImageStack'
 import MintInfo from '@/components/MintInfo'
+import Roadmap from '@/components/Roadmap'
+
 
 export default function Home() {
   return (
@@ -19,13 +21,13 @@ export default function Home() {
       <ConfettiRain />
       <JugglingItems />
       <ScrollingText />
-      <HeroSection />
-      <ParallaxImage />
-      <GallerySection />
-      <WhitelistForm />
+      <HeroSection />     
+      <CircularGallery />
+      {/* <WhitelistForm /> */}
       <ImageStack/>
       <MintInfo />
-      <EthosSection />
+      <Roadmap />
+      {/* <EthosSection /> */}
       
       <Footer />
     </main>

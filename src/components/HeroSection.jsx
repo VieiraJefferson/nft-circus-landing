@@ -64,13 +64,8 @@ export default function HeroSection() {
         COLOR, SHAPE, AND STORY.
       </h2>
 
-      <div className={styles.buttons}>
-        <a href="#whitelist">Whitelist</a>
-        <a href="#">Discord</a>
-        <a href="https://x.com/MareiPallas">
-          <FaXTwitter style={{ marginRight: "0.4rem" }} />
-        </a>
-      </div>
+  
+
     </section>
   );
 }

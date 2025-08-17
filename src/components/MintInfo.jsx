@@ -39,6 +39,8 @@ export default function MintInfo() {
           <div className={styles.cube2}></div>
         </div>
 
+
+
         <motion.h2 
           className={`${styles.title} ${luckiestGuy.className}`}
           variants={fadeInUp}
@@ -59,12 +61,12 @@ export default function MintInfo() {
 
           <motion.div className={styles.infoItem} variants={fadeInUp}>
             <h3 className={`${styles.label} ${luckiestGuy.className}`}>WHITELIST (WL)</h3>
-            <p className={`${styles.value} ${luckiestGuy.className}`}>50$ IN $BTC</p>
+            <p className={`${styles.value} ${luckiestGuy.className}`}>50$ IN <span className={styles.btcColor}>$BTC</span></p>
           </motion.div>
 
           <motion.div className={styles.infoItem} variants={fadeInUp}>
             <h3 className={`${styles.label} ${luckiestGuy.className}`}>PUBLIC MINT</h3>
-            <p className={`${styles.value} ${luckiestGuy.className}`}>100$ IN $BTC</p>
+            <p className={`${styles.value} ${luckiestGuy.className}`}>100$ IN <span className={styles.btcColor}>$BTC</span></p>
           </motion.div>
         </div>
       </motion.div>

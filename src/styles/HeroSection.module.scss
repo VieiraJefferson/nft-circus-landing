@@ -26,18 +26,41 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start; /* Mudado de center para flex-start */
   align-items: center;
-  padding: 2rem;
+  padding: calc(8rem + 10px) 2rem 2rem 2rem; /* 10px mais abaixo */
   text-align: center;
   position: relative;
   overflow: hidden; /* Previne scroll indesejado */
+  border-top: 6px solid #000;
+  
+  /* Ajustes responsivos para o padding */
+  @media (max-width: 768px) {
+    padding: calc(6rem + 10px) 2rem 2rem 2rem; /* 10px mais abaixo em tablet */
+  }
+  
+  @media (max-width: 480px) {
+    padding: calc(4rem + 10px) 1rem 2rem 1rem; /* 10px mais abaixo em mobile */
+  }
+  
+  /* Background image que se move junto com o conteúdo */
+  background-image: url('/parallax/background.png');
+  background-size: cover; /* Cobre toda a área sem distorcer */
+  background-position: center center; /* Centraliza a imagem */
+  background-repeat: no-repeat; /* Não repete */
+  background-attachment: scroll; /* Move junto com o scroll */
+  
+  /* Garantia de que ocupe toda a largura e altura */
+  width: 100vw;
+  height: 100vh; /* Altura fixa de 100vh */
+  margin-left: calc(-50vw + 50%); /* Quebra container para ocupar tela toda */
 }
 
 /* CONTAINER DO TÍTULO */
 .titleWrapper {
   position: relative;
-  margin-bottom: 3rem;
+  margin-bottom: 0rem;
+  padding-top: 0;
   width: 100%;
   z-index: 1;
 }
@@ -87,7 +110,7 @@
 /* CRÉDITO (Posicionamento corrigido) */
 .credit {
   position: absolute;
-  right:18rem;
+  right:35rem;
   margin-top: 2rem;
   bottom: -1.5rem;
   font-size: 1.6rem;
@@ -114,7 +137,7 @@
 .subtitle {
   font-size: 1.6rem;
   max-width: 700px;
-  margin: 0 auto 2rem;
+  margin-top: 0rem;
   color: white;
   line-height: 1.5;
   text-transform: uppercase;

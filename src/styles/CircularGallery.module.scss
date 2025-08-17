@@ -1,0 +1,186 @@
+.galleryWrapper {
+  width: 100vw;
+  border-top: 6px solid #000;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 1s ease;
+  position: relative;
+  overflow: hidden;
+  
+  // Afrika Theme - Warm earth tones + image
+  &.afrika {
+    background-image: url('/backgrounds/africa.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    // Sobrepor gradiente com transparência
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(-45deg, rgba(210, 105, 30, 0.5), rgba(205, 133, 63, 0.5), rgba(218, 165, 32, 0.5), rgba(244, 164, 96, 0.5));
+      background-size: 400% 400%;
+      animation: gradientFlow 8s ease infinite;
+      z-index: 1;
+      pointer-events: none;
+    }
+  }
+  
+  // Asian Theme - Mystical purples and blues + image
+  &.asian {
+    background-image: url('/backgrounds/asia.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    // Sobrepor gradiente com transparência
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(-45deg, rgba(147, 112, 219, 0.5), rgba(106, 90, 205, 0.5), rgba(65, 105, 225, 0.5), rgba(0, 191, 255, 0.5));
+      background-size: 400% 400%;
+      animation: gradientFlow 8s ease infinite;
+      z-index: 1;
+      pointer-events: none;
+    }
+  }
+  
+  // American Theme - Vibrant american colors + image
+  &.american {
+    background-image: url('/backgrounds/american.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    // Sobrepor gradiente com transparência
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(-45deg, rgba(255, 20, 147, 0.5), rgba(255, 105, 180, 0.5), rgba(255, 215, 0, 0.5), rgba(255, 140, 0, 0.5));
+      background-size: 400% 400%;
+      animation: gradientFlow 8s ease infinite;
+      z-index: 1;
+      pointer-events: none;
+    }
+  }
+  
+
+}
+
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  position: relative;
+  z-index: 3; // Acima do overlay gradiente
+}
+
+.title {
+  font-size: 8rem;
+  text-align: center;
+  color: white;
+  text-shadow: -4px 4px 0 #000;
+  margin-bottom: 4rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  
+  @media (max-width: 768px) {
+    font-size: 5rem;
+    margin-bottom: 3rem;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+}
+
+.canvasContainer {
+  width: 100%;
+  height: 75vh;
+  min-height: 600px;
+  cursor: grab;
+  
+  &:active {
+    cursor: grabbing;
+  }
+  
+  canvas {
+    width: 100% !important;
+    height: 100% !important;
+  }
+  
+  @media (max-width: 768px) {
+    height: 65vh;
+    min-height: 450px;
+  }
+  
+  @media (max-width: 480px) {
+    height: 55vh;
+    min-height: 350px;
+  }
+}
+
+// Decorative elements for enhanced theming
+.galleryWrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.1;
+  pointer-events: none;
+  background-size: 50px 50px;
+  z-index: 1;
+}
+
+.galleryWrapper.afrika::before {
+  background-image: 
+    radial-gradient(circle at 25px 25px, rgba(255,255,255,0.2) 2px, transparent 0),
+    radial-gradient(circle at 75px 75px, rgba(255,255,255,0.1) 1px, transparent 0);
+}
+
+.galleryWrapper.asian::before {
+  background-image: 
+    linear-gradient(45deg, rgba(255,255,255,0.1) 25%, transparent 25%),
+    linear-gradient(-45deg, rgba(255,255,255,0.1) 25%, transparent 25%);
+}
+
+.galleryWrapper.american::before {
+  background-image: 
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 10px,
+      rgba(255,255,255,0.1) 10px,
+      rgba(255,255,255,0.1) 11px
+    );
+}
+
+.galleryWrapper.magician::before {
+  background-image: 
+    radial-gradient(circle at 50% 50%, rgba(255,255,255,0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+}

@@ -109,6 +109,7 @@
   max-width: 700px;
   margin: 0 auto;
   box-sizing: border-box; // Add this to prevent overflow
+  border-top: 6px solid #000;
   width: calc(100% - 2rem); // Add this to account for padding
 
   h2 {

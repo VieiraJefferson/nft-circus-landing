@@ -1,0 +1,268 @@
+.roadmapWrapper {
+  min-height: 95vh;
+  width: 100vw;
+  border-top: 6px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem 2rem 4rem 2rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 2rem;
+}
+
+.sectionTitle {
+  font-size: 5rem;
+  color: white;
+  text-shadow: -4px 4px 0 #000;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin: -8rem -0 5rem 0;
+  
+  @media (max-width: 768px) {
+    font-size: 3rem;
+    margin: 0 0 2rem 0;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 2.5rem;
+    margin: 0 0 1.5rem 0;
+  }
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  width: 100%;
+  align-items: center;
+  flex: 1;
+  align-content: center;
+  
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+    text-align: center;
+  }
+}
+
+.titleSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.mainTitle {
+  font-size: 6rem;
+  color: white;
+  text-shadow: -4px 4px 0 #000;
+  line-height: 1.1;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0;
+  
+  @media (max-width: 1200px) {
+    font-size: 4.5rem;
+  }
+  
+  @media (max-width: 768px) {
+    font-size: 3rem;
+    text-align: center;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 2.2rem;
+  }
+}
+
+.cardsSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.card {
+  background: rgba(138, 43, 226, 0.3);
+  backdrop-filter: blur(20px);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  
+  &:hover {
+    border-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+  }
+  
+  &.cardOpen {
+    border-color: rgba(138, 43, 226, 0.6);
+    box-shadow: 0 12px 40px rgba(138, 43, 226, 0.2);
+  }
+}
+
+.cardHeader {
+  background: rgba(138, 43, 226, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+  cursor: pointer;
+  user-select: none;
+  
+  @media (max-width: 768px) {
+    padding: 1.5rem;
+  }
+  
+  @media (max-width: 480px) {
+    padding: 1.2rem;
+  }
+}
+
+.cardTitle {
+  font-size: 1.4rem;
+  color: white;
+  text-shadow: -2px 2px 0 #000;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  flex: 1;
+  text-align: left;
+  
+  
+  @media (max-width: 768px) {
+    font-size: 1.2rem;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 1rem;
+  }
+}
+
+.cardIcon {
+  width: 40px;
+  height: 40px;
+  border: 2px solid white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 1rem;
+  background: rgba(138, 43, 226, 0.3);
+  transition: all 0.3s ease;
+  
+  .card:hover & {
+    background: rgba(138, 43, 226, 0.6);
+    transform: scale(1.1);
+  }
+  
+  @media (max-width: 480px) {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+.plus {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: -1px 1px 0 #000;
+  
+  @media (max-width: 480px) {
+    font-size: 1.3rem;
+  }
+}
+
+.cardContent {
+  overflow: hidden;
+  
+}
+
+.cardText {
+  padding: 0 2rem 2rem 2rem;
+  background: rgba(138, 43, 226, 0.3);
+  p {
+    font-size: 1.3rem;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: -2px 2px 0 #000;
+    line-height: 1.6;
+    margin: 0;
+    text-transform: none;
+    letter-spacing: 0.5px;
+  }
+  
+  @media (max-width: 768px) {
+    padding: 0 1.5rem 1.5rem 1.5rem;
+    
+    p {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    padding: 0 1.2rem 1.2rem 1.2rem;
+    
+    p {
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+  }
+}
+
+// Responsive adjustments for mobile
+@media (max-width: 1024px) {
+  .roadmapWrapper {
+    min-height: auto;
+    padding: 4rem 0;
+  }
+  
+  .content {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+  
+  .titleSection {
+    order: 1;
+  }
+  
+  .cardsSection {
+    order: 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1.5rem 1rem 3rem 1rem;
+    padding-top: 1.5rem;
+  }
+  
+  .content {
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 1rem 1rem 2rem 1rem;
+    padding-top: 1rem;
+  }
+  
+  .content {
+    gap: 2rem;
+  }
+  
+  .cardsSection {
+    gap: 1rem;
+  }
+}

@@ -6,6 +6,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  border-top: 6px solid #000;
+  background: #6A81FD;
 }
 
 .container {
@@ -118,7 +120,7 @@
 
 .title {
   margin-top: 0rem;
-  font-size: 10rem;
+  font-size: 9rem;
   text-align: center;
   color: white;
   text-shadow: -4px 4px 0 #000;
@@ -141,13 +143,13 @@
   max-width: 600px;
   margin: 0 auto;
   h2 {
-    font-size: 8rem;
+    font-size: 7rem;
   }
   h3 {
-    font-size: 4rem;
+    font-size: 3rem;
   }
   p {
-    font-size: 3.7rem;
+    font-size: 3.1rem;
   }
 }
 
@@ -203,3 +205,9 @@
 .soldOut {
   color: #ff6b6b !important;
 }
+
+.btcColor {
+  color: #F7921C !important;
+}
+
+

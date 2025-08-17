@@ -21,14 +21,16 @@ const nftImages = [
 
 export default function GallerySection() {
   return (
-    <section className={`${styles.gallery} fade-up ${luckiestGuy.className}`}>
-      <h2>Gallery</h2>
-      <div className={styles.grid}>
-        {nftImages.map((src, index) => (
-          <div className={styles.card} key={index}>
-            <img src={src} alt={`NFT ${index + 1}`} />
-          </div>
-        ))}
+    <section className={styles.galleryWrapper}>
+      <div className={`${styles.gallery} fade-up ${luckiestGuy.className}`}>
+        <h2>Gallery</h2>
+        <div className={styles.grid}>
+          {nftImages.map((src, index) => (
+            <div className={styles.card} key={index}>
+              <img src={src} alt={`NFT ${index + 1}`} />
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   )

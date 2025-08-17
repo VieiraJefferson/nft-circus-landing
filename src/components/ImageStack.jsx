@@ -3,7 +3,7 @@ import styles from '@/styles/ImageStack.module.scss'
 import { Luckiest_Guy } from 'next/font/google'
 
 const imageList = [
-  '/Geigerin.png',
+  '/Arials-mit-Rahmen.png',
   '/Zauberer.1.png',
   '/Rahmen-Jonlgeure.png',
 ]
@@ -28,7 +28,7 @@ export default function ImageStack() {
       </div>
       <div className={`${styles.textSection} ${luckiestGuy.className}`}>
         <h2>Welcome to the world of Circuskinder</h2>
-        <p>A hand-drawn NFT collection that celebrates imagination, play, and gentle individuality.
+        <p>A hand-drawn Art collection that celebrates imagination, play, and gentle individuality.
 
 Each character is a one-of-a-kind circus child, lovingly illustrated to reflect rhythm, color, and quiet magic.
 From aerial acrobats to balancing bees, every figure has its own story — full of movement, joy, and expression.

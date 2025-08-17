@@ -17,6 +17,11 @@ const luckiestGuy = Luckiest_Guy({
 export const metadata = {
   title: 'Circuskinder',
   description: 'A visual journey into the imaginary',
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+    apple: '/favicon.ico',
+  },
 }
 
 export default function RootLayout({ children }) {

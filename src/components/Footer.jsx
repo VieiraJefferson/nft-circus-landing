@@ -1,6 +1,6 @@
 import styles from '@/styles/Footer.module.scss'
 import { Luckiest_Guy } from 'next/font/google'
-import { FaGlobe } from 'react-icons/fa6'
+import { FaXTwitter } from 'react-icons/fa6'
 
 const luckiestGuy = Luckiest_Guy({
   subsets: ['latin'],
@@ -10,15 +10,46 @@ const luckiestGuy = Luckiest_Guy({
 export default function Footer() {
   return (
     <footer className={`${styles.footer} ${luckiestGuy.className}`}>
-      <p>
-        © 2025 VieiraDev •  
-        <a href="https://magiceden.io/">Magic Eden</a> • 
-        <a href="#">Discord</a> • 
-        <a href="https://x.com/MareiPallas">Twitter</a> • 
-        <a href="https://pallasgalaxy.vercel.app/" target="_blank" rel="noopener noreferrer" className={styles.iconLink}>
-          <FaGlobe /> Marei Pallas
-        </a>
-      </p>
+      <div className={styles.container}>
+        {/* Left Section - Navigation Links */}
+        <div className={styles.leftSection}>
+          <div className={styles.navLinks}>
+            <h3 className={styles.sectionTitle}>PLAY ART</h3>
+            <h3 className={styles.sectionTitle}>JOIN THE CIRCUS</h3>
+          </div>
+          <div className={styles.navLinks}>
+            <h3 className={styles.sectionTitle}>LETS BUILD</h3>
+            <h3 className={styles.sectionTitle}>TOGHETER</h3>
+          </div>
+          <div className={styles.buySection}>
+            <h3 className={styles.buyTitle}>BRC20 </h3>
+          </div>
+        </div>
+
+        {/* Right Section - Social Media */}
+        <div className={styles.rightSection}>
+          <h3 className={styles.followTitle}>FOLLOW mareipallas</h3>
+          <div className={styles.socialIcons}>
+            <a href="https://x.com/MareiPallas" className={`${styles.socialIcon} ${styles.twitter}`}>
+              <FaXTwitter />
+          
+            </a>
+          </div>
+        </div>
+
+        {/* Character Image */}
+        <div className={styles.character}>
+          <img src="/juggle1.png" alt="Circus Character" />
+        </div>
+      </div>
+
+      {/* Bottom Section */}
+      <div className={styles.bottomSection}>
+       
+        <div className={styles.copyright}>
+          <p>COPYRIGHT © 2025 CIRKUSKINDER, INC. ALL RIGHTS RESERVED</p>
+        </div>
+      </div>
     </footer>
   )
 }
