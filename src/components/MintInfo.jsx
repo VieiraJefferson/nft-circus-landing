@@ -31,13 +31,13 @@ export default function MintInfo() {
         whileInView="animate"
         viewport={{ once: true, amount: 0.3 }}
       >
-        {/* Decorative elements */}
+        {/* Decorative elements
         <div className={styles.decorativeElements}>
           <div className={styles.star1}></div>
           <div className={styles.star2}></div>
           <div className={styles.cube1}></div>
           <div className={styles.cube2}></div>
-        </div>
+        </div> */}
 
 
 

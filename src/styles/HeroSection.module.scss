@@ -50,10 +50,9 @@
   background-repeat: no-repeat; /* Não repete */
   background-attachment: scroll; /* Move junto com o scroll */
   
-  /* Garantia de que ocupe toda a largura e altura */
-  width: 100vw;
-  height: 100vh; /* Altura fixa de 100vh */
-  margin-left: calc(-50vw + 50%); /* Quebra container para ocupar tela toda */
+           /* Garantia de que ocupe toda a largura e altura */
+         width: 100%;
+         height: 100vh; /* Altura fixa de 100vh */
 }
 
 /* CONTAINER DO TÍTULO */
