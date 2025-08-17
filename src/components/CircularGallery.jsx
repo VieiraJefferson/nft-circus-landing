@@ -534,21 +534,21 @@ class App {
 const nftGroups = [
   // Grupo 1: Afrika Theme
   [
-    { image: '/img/Arabien.png', text: 'Afrika Explorer' },
-    { image: '/img/Jongleuer.png', text: 'Afrika Dancer' },
-    { image: '/img/Zauberer1.png', text: 'Magic Musician' },
+    { image: '/img/Arabien.png', text: '' },
+    { image: '/img/Jongleuer.png', text: '' },
+    { image: '/img/Zauberer1.png', text: '' },
   ],
   // Grupo 2: Asian Theme  
   [
-    { image: '/img/Kofpstand.png', text: 'Handstand' },
-    { image: '/img/Seile.png', text: 'Asian Warrior' },
-    { image: '/img/Arials.png', text: 'Melody Make' },
+    { image: '/img/Kofpstand.png', text: '' },
+    { image: '/img/Seile.png', text: '' },
+    { image: '/img/Arials.png', text: '' },
   ],
   // Grupo 3: Musicians Theme
   [
-    { image: '/img/Taenzer.png', text: 'Arabien Night' },
-    { image: '/img/Trapez1.png', text: 'Rhythm Master' },
-    { image: '/img/Katzenmensch.png', text: 'Ancient Spirit' },
+    { image: '/img/Taenzer.png', text: '' },
+    { image: '/img/Trapez1.png', text: '' },
+    { image: '/img/Katzenmensch.png', text: '' },
   ],
 
 ];
@@ -587,7 +587,7 @@ export default function CircularGallery() {
   return (
     <section className={`${styles.galleryWrapper} ${styles[backgroundThemes[currentGroup]]}`}>
       <div className={styles.container}>
-        <h2 className={`${styles.title} ${luckiestGuy.className}`}>Gallery</h2>
+        <h2 className={`${styles.title} ${luckiestGuy.className}`}>Across all borders, one passion unites us: the love for the circus.</h2>
         <div
           className={styles.canvasContainer}
           ref={containerRef}

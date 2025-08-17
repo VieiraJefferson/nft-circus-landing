@@ -56,7 +56,7 @@ export default function HeroSection() {
           ))}
         </motion.h1>
 
-        <span className={styles.credit}>by Marei Pallas</span>
+        
       </div>
 
       <h2 className={`${styles.subtitle} ${luckiestGuy.className}`}>

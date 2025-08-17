@@ -18,17 +18,17 @@ export default function Footer() {
             <h3 className={styles.sectionTitle}>JOIN THE CIRCUS</h3>
           </div>
           <div className={styles.navLinks}>
-            <h3 className={styles.sectionTitle}>LETS BUILD</h3>
+            <h3 className={styles.sectionTitle}>LET'S BUILD</h3>
             <h3 className={styles.sectionTitle}>TOGHETER</h3>
           </div>
           <div className={styles.buySection}>
-            <h3 className={styles.buyTitle}>BRC20 </h3>
+            <h3 className={styles.buyTitle}>BRC-20 </h3>
           </div>
         </div>
 
         {/* Right Section - Social Media */}
         <div className={styles.rightSection}>
-          <h3 className={styles.followTitle}>FOLLOW mareipallas</h3>
+          <h3 className={styles.followTitle}>FOLLOW @mareipallas</h3>
           <div className={styles.socialIcons}>
             <a href="https://x.com/MareiPallas" className={`${styles.socialIcon} ${styles.twitter}`}>
               <FaXTwitter />
@@ -47,7 +47,7 @@ export default function Footer() {
       <div className={styles.bottomSection}>
        
         <div className={styles.copyright}>
-          <p>COPYRIGHT © 2025 CIRKUSKINDER, INC. ALL RIGHTS RESERVED</p>
+          <p>COPYRIGHT © 2025 CIRCUSKINDER, INC. ALL RIGHTS RESERVED</p>
         </div>
       </div>
     </footer>

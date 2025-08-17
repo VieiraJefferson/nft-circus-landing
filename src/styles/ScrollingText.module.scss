@@ -37,12 +37,14 @@
 
 .marqueeWrapper {
   overflow: hidden;
-  height: 1.3rem;
+  height: 3.7rem;
   width: 100%;
   background: #00142D;
-  padding: 1rem 0;
+  padding: 1.5rem 0;
   position: relative;
   z-index: 100;
+  display: flex;
+  align-items: center;
 }
 
 .marqueeTrack {
@@ -55,9 +57,10 @@
     display: flex;
     gap: 2rem; // Espaço entre textos
   }
+}
 
 .textItem {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: 800;
   background: linear-gradient(90deg, #ff6ec4, #42e3f3, #f7dc33);
   background-clip: text;
@@ -66,8 +69,6 @@
   -webkit-text-fill-color: transparent;
   white-space: nowrap;
   filter: drop-shadow(2px 2px 0 #000); // sombra opcional
-}
-
 }
 
 @keyframes scrollLoop {

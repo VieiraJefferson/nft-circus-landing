@@ -31,11 +31,11 @@ export default function ImageStack() {
         <p>A hand-drawn Art collection that celebrates imagination, play, and gentle individuality.
 
 Each character is a one-of-a-kind circus child, lovingly illustrated to reflect rhythm, color, and quiet magic.
-From aerial acrobats to balancing bees, every figure has its own story — full of movement, joy, and expression.
+From aerial acrobats to balancing bees, every figure has its own story, full of movement, joy, and expression.
 
 We believe in the beauty of diversity and the power of wonder.
-No roadmap, no gimmicks — just pure art on Bitcoin.
-It's a colorful place — and there's always room for one more in the ring.
+No roadmap, no gimmicks, just pure art on Bitcoin.
+It's a colorful place, and there's always room for one more in the ring.
 </p>
         {/* <button>Connect Wallet</button> */}
       </div>

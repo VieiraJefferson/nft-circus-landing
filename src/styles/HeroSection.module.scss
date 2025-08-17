@@ -35,6 +35,14 @@
   border-top: 6px solid #000;
   
   /* Ajustes responsivos para o padding */
+  @media (max-width: 1024px) {
+    padding: calc(7rem + 10px) 2rem 2rem 2rem; /* 10px mais abaixo em desktop médio */
+  }
+
+  @media (max-width: 900px) {
+    padding: calc(6.5rem + 10px) 2rem 2rem 2rem; /* 10px mais abaixo em tablet grande */
+  }
+
   @media (max-width: 768px) {
     padding: calc(6rem + 10px) 2rem 2rem 2rem; /* 10px mais abaixo em tablet */
   }
@@ -93,40 +101,81 @@
   }
 
   /* Responsividade */
-  @media (max-width: 1200px) { font-size: 8rem; }
+  @media (max-width: 1200px) { 
+    font-size: 8rem; 
+    margin-bottom: 2rem;
+  }
+  @media (max-width: 1024px) { 
+    font-size: 6.5rem; 
+    margin-bottom: 2.5rem;
+    line-height: 0.95;
+  }
+  @media (max-width: 900px) { 
+    font-size: 5.5rem; 
+    margin-bottom: 2.5rem;
+    line-height: 0.95;
+  }
   @media (max-width: 768px) { 
     font-size: 5rem;
     line-height: 1;
+    margin-bottom: 3rem;
   }
   @media (max-width: 480px) { 
     font-size: 3rem;
+    margin-bottom: 2rem;
+    line-height: 1.1;
+  }
+  @media (max-width: 360px) { 
+    font-size: 2.6rem; 
+    margin-bottom: 1.5rem;
+  }
+  @media (max-width: 320px) { 
+    font-size: 2.2rem; 
     margin-bottom: 1rem;
   }
-  @media (max-width: 360px) { font-size: 2.6rem; }
-  @media (max-width: 320px) { font-size: 2.2rem; }
 }
 
 /* CRÉDITO (Posicionamento corrigido) */
 .credit {
   position: absolute;
-  right:35rem;
+  right: 35rem;
   margin-top: 2rem;
   bottom: -1.5rem;
   font-size: 1.6rem;
   font-weight: 800;
   color: rgba(255, 255, 255, 0.85);
   font-style: italic;
-   text-shadow:
+  text-shadow:
     -2px 2px 0 #000,
     -2px 2px 0 #000;
 
+  @media (max-width: 1200px) {
+    right: 20rem;
+    font-size: 1.2rem;
+  }
+
+  @media (max-width: 1024px) {
+    right: 15rem;
+    font-size: 1.1rem;
+  }
+
+  @media (max-width: 900px) {
+    right: 10rem;
+    font-size: 1rem;
+  }
+
   @media (max-width: 768px) {
+    position: relative;
+    right: auto;
+    bottom: auto;
     font-size: 0.85rem;
+    margin-top: 1rem;
+    text-align: center;
   }
 
   @media (max-width: 480px) {
     font-size: 0.75rem;
-    bottom: -1.2rem;
+    margin-top: 0.5rem;
   }
 }
 
@@ -144,9 +193,29 @@
   animation: bounceFade 1.6s ease-out forwards;
   padding: 0 1rem;
 
+  @media (max-width: 1024px) {
+    font-size: 1.4rem;
+    max-width: 85%;
+    margin-top: 0.8rem;
+  }
+
+  @media (max-width: 900px) {
+    font-size: 1.3rem;
+    max-width: 88%;
+    margin-top: 0.8rem;
+  }
+
   @media (max-width: 768px) {
     font-size: 1.2rem;
     max-width: 90%;
+    margin-top: 1rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1rem;
+    max-width: 95%;
+    margin-top: 0.5rem;
+    line-height: 1.4;
   }
 }
 
@@ -158,6 +227,22 @@
   gap: 1rem;
   margin-top: 2rem;
   z-index: 2;
+
+  @media (max-width: 1024px) {
+    margin-top: 1.8rem;
+  }
+
+  @media (max-width: 900px) {
+    margin-top: 1.7rem;
+  }
+
+  @media (max-width: 768px) {
+    margin-top: 1.5rem;
+  }
+
+  @media (max-width: 480px) {
+    margin-top: 1rem;
+  }
 
   a {
     background-color: #ff4f4f;
@@ -175,6 +260,14 @@
       box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
     }
 
+    @media (max-width: 1024px) {
+      padding: 0.75rem 1.4rem;
+      font-size: 0.95rem;
+    }
+    @media (max-width: 900px) {
+      padding: 0.7rem 1.3rem;
+      font-size: 0.9rem;
+    }
     @media (max-width: 768px) {
       padding: 0.7rem 1.3rem;
       font-size: 0.9rem;

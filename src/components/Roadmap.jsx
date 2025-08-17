@@ -23,17 +23,17 @@ const roadmapItems = [
   {
     id: 3,
     question: "What comes after the mint?",
-    answer: "After the public mint, a Token for Good will be launched. It’s not about speculation, but about access to drops, supporting artistic & social projects, and giving the community a voice in shaping the future."
+    answer: "After the public mint, a Token for Good will be launched. It’s about access to drops, supporting artistic & social projects, and giving the community a voice in shaping the future."
   },
   {
     id: 4,
-    question: "BRC 20",
-    answer: "Unlike other NFT projects, Circuskinder focuses purely on art and community. No roadmaps with unrealistic promises, no utility tokens - just beautiful, hand-drawn art that celebrates diversity and wonder. We believe in the power of imagination and the beauty of simple, authentic creativity."
+    question: "What about the BRC-20 token?  ",
+    answer: " A BRC-20 token will be airdropped exclusively to Circuskinder holders. This token is designed as a “Token for Good”, and it will also extend to the next upcoming collection, connecting both worlds.   "
   },
   {
     id: 5,
     question: "What is the utility of the token?",
-    answer: "The token is designed as a “Token for Good.” It is not about speculation, but about creating real value: it gives access to exclusive drops and early previews, supports artistic and social projects, allows holders to vote and shape the future of Circuskinder, and strengthens the bond between art, collectors and future collaborations."
+    answer: "The token is about creating real value: it gives access to exclusive drops and early previews, supports artistic and social projects, allows holders to take part in decisions, and strengthens the bond between art, collectors, and future collaborations. "
   }
 ];
 
