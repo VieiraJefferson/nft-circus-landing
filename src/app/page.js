@@ -10,6 +10,8 @@ import GallerySection from '@/components/GallerySection'
 import Footer from '@/components/Footer'
 import EthosSection from '@/components/EthosSection'
 import WhitelistForm from '@/components/WhitelistForm'
+import ImageStack from '@/components/ImageStack'
+import MintInfo from '@/components/MintInfo'
 
 export default function Home() {
   return (
@@ -21,6 +23,8 @@ export default function Home() {
       <ParallaxImage />
       <GallerySection />
       <WhitelistForm />
+      <ImageStack/>
+      <MintInfo />
       <EthosSection />
       
       <Footer />

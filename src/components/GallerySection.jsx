@@ -11,7 +11,11 @@ const nftImages = [
   '/Circuskinder_Afrika_02_.png',
   '/Circuskinder_Musiker_02.png',
   '/Circuskinder_Altertum_04.png',
- 
+  './Circuskinder_Arabien_03.png',
+  './Circuskinder_Asien_02.png',
+  './Circuskinder_Asien_03.png',
+  './Circuskinder_Musiker_03.png',
+  './Circuskinder_Zauberer_03.png',
   '/Circuskinder_Zauberer_04.png'
 ]
 

@@ -1,17 +1,75 @@
+// .footer {
+//   text-align: center;
+//   margin-top: 4rem;
+//   padding: 2rem 1rem;
+//   font-size: 1.4rem;
+//   color: #f8f4f4;
+
+//   a {
+//     color: #fcfcfc;
+//     text-decoration: none;
+//     margin: 0 0.5rem;
+
+//     &:hover {
+//       color: #6e6e6ebe;
+//     }
+//   }
+// }
+
+
 .footer {
   text-align: center;
   margin-top: 4rem;
   padding: 2rem 1rem;
   font-size: 1.4rem;
   color: #f8f4f4;
+  width: 100%;
+  box-sizing: border-box;
 
   a {
     color: #fcfcfc;
     text-decoration: none;
     margin: 0 0.5rem;
+    display: inline-block; // Better for mobile touch targets
+    transition: color 0.3s ease; // Smooth hover effect
 
     &:hover {
       color: #6e6e6ebe;
+    }
+  }
+
+  // Tablet screens (768px and below)
+  @media (max-width: 768px) {
+    font-size: 1.2rem;
+    padding: 1.5rem 1rem;
+    margin-top: 3rem;
+
+    a {
+      margin: 0 0.4rem;
+      padding: 0.2rem 0; // Better touch area
+    }
+  }
+
+  // Mobile screens (480px and below)
+  @media (max-width: 480px) {
+    font-size: 1rem;
+    padding: 1rem 0.5rem;
+    margin-top: 2rem;
+
+    a {
+      margin: 0 0.3rem;
+      line-height: 1.5; // Better spacing
+    }
+  }
+
+  // Small mobile screens (360px and below)
+  @media (max-width: 360px) {
+    font-size: 0.9rem;
+    
+    a {
+      display: block; // Stack links vertically on very small screens
+      margin: 0.3rem 0;
+      padding: 0.3rem 0;
     }
   }
 }

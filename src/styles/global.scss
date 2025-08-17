@@ -1,5 +1,9 @@
 @use './variables' as *;
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 
 body {
   margin: 0;
@@ -52,7 +56,7 @@ section {
 }
 
 .fade-up {
-  opacity: 1; // <- garante visibilidade inicial
+  opacity: 1; /* ensures initial visibility */
   animation: fadeUp 1s ease forwards;
 }
 
@@ -66,7 +70,7 @@ section {
   transition: background 0.3s ease;
 
    &:hover {
-    background-color: #1976d2; // manualmente ajustado
+    background-color: #1976d2; /* manually adjusted */
   }
 }
 
