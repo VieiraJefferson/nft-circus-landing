@@ -19,7 +19,20 @@
     flex-direction: column;
     gap: 2rem;
     padding: 2rem 1rem;
-    min-height: 100vh;
+    min-height: auto;
+    height: auto;
+  }
+
+  @media (max-width: 768px) {
+    min-height: auto;
+    height: auto;
+    padding: 1.5rem 1rem;
+  }
+
+  @media (max-width: 480px) {
+    min-height: auto;
+    height: auto;
+    padding: 1rem 0.5rem;
   }
 }
 
@@ -43,7 +56,6 @@
 .cardContainer {
   flex: 1;
   max-width: 512px; // Adjusted to accommodate the swiper
-  min-height: 512px; // Adjusted to accommodate the swiper
   width: 100%; // Ensure it respects container width
   margin-right: 5rem;
   background: transparent; // Changed to transparent to let the swiper handle styling
@@ -55,14 +67,29 @@
   box-sizing: border-box;
 
   @media (max-width: 900px) {
-    max-width: 100%;
-    min-height: 372px; // Adjusted for mobile
-    margin: 0; // Remove both left and right margins
-    width: calc(100% - 2rem); // Account for mobile padding
+    max-width: 60%;
+    margin: 0;
+    width: calc(60% - 2rem);
+  }
+
+  @media (max-width: 768px) {
+    max-width: 50%;
+    width: calc(50% - 2rem);
   }
 
   @media (max-width: 480px) {
-    min-height: 312px; // Smaller height for very small screens
+    max-width: 40%;
+    width: calc(40% - 2rem);
+  }
+
+  @media (max-width: 430px) {
+    max-width: 35%;
+    width: calc(35% - 2rem);
+  }
+
+  @media (max-width: 375px) {
+    max-width: 30%;
+    width: calc(30% - 2rem);
   }
 }
 
